@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import { registerRootComponent } from 'expo';
 import { useState, useEffect, useCallback } from "react";
 import { StyleSheet, View } from "react-native";
 import * as Font from "expo-font";
@@ -14,6 +15,7 @@ const loadFonts = async () => {
 };
 
 SplashScreen.preventAutoHideAsync();
+registerRootComponent(App);
 
 export default function App() {
   const [isReady, setIsReady] = useState(false);
